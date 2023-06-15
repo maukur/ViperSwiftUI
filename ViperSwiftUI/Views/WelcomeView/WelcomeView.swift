@@ -7,13 +7,16 @@
 
 import SwiftUI
 
-struct WelcomeView: View {
+struct WelcomeView<T: WelcomePresenterProtocol>: View {
     
-    @ObservedObject var presenter: WelcomePresenter
+    init(presenter: T) {
+        self.presenter = presenter
+    }
+    
+    @ObservedObject var presenter: T
     
     var body: some View {
         VStack {
-            
             HStack {
                 Button {
                     presenter.increase()
@@ -46,15 +49,15 @@ struct WelcomeView: View {
             Button("Open URL") {
                 presenter.openUrl(url: "https://github.com/maukur")
             }
-            .onChange(of: presenter.isOn) { newValue in
-                presenter.isToggle()
+            Button("Show Alert") {
+                presenter.showSimpleAlert()
             }
-        }
-       
+        }.alert(item: $presenter.alert, content: presenter.alert(for:))
+
     }
     
+    
 }
-
 
 struct WelcomeView_Previews: PreviewProvider {
     static var previews: some View {

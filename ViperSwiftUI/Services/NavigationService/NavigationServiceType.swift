@@ -7,6 +7,6 @@
 
 import Foundation
 
-protocol NavigationServiceType: ObservableObject {
+protocol NavigationServiceType: ObservableObject, Identifiable {
     var navigation:[NavigationPath] { get set }
 }

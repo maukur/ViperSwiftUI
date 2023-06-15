@@ -9,7 +9,8 @@ import Foundation
 import SwiftUI
 
 public class NavigationService: NavigationServiceType  {
-    let id = UUID()
+     
+    public let id = UUID()
     
     public static func == (lhs: NavigationService, rhs: NavigationService) -> Bool {
         lhs.id == rhs.id
@@ -23,12 +24,10 @@ enum NavigationPath: Equatable, Hashable {
     case welcome(Color)
 }
 
-
-
 class StubNavigation: NavigationServiceType, ObservableObject, Equatable  {
-    
-    let id = UUID()
-    
+        
+    public let id = UUID()
+
     public static func == (lhs: StubNavigation, rhs: StubNavigation) -> Bool {
         lhs.id == rhs.id
     }

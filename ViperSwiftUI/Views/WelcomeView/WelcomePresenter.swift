@@ -3,7 +3,7 @@ import Combine
 
 
 final class WelcomePresenter: WelcomePresenterProtocol {
-   
+    
     var subscribers: Set<AnyCancellable> = []
     var router: WelcomeViewRouterProtocol
     var interactor: WelcomeInteractorProtocol
@@ -11,8 +11,8 @@ final class WelcomePresenter: WelcomePresenterProtocol {
     @Published var color: Color = .accentColor
     @Published var count: Int = 0
     @Published var isOn: Bool = false
-         
-    
+    @Published var alert: AlertItem?
+
     init(router: WelcomeViewRouterProtocol,
          interactor: WelcomeInteractorProtocol) {
         self.router = router
@@ -57,5 +57,15 @@ final class WelcomePresenter: WelcomePresenterProtocol {
         }
     }
     
+    func alert(for item: AlertItem)-> Alert {
+        switch item.type {
+        default:
+            return Alert(title: Text("Simple Alert"))
+        }
+    }
+    
+    func showSimpleAlert() {
+        alert = AlertItem(type: .simple)
+    }
      
 }

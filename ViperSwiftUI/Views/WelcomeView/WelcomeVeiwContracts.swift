@@ -14,14 +14,18 @@ protocol WelcomeViewRouterProtocol: RouterProtocol {
 }
 
 protocol WelcomePresenterProtocol: PresenterProtocol {
-    func navigateToHome()
-    func navigateWelcome() 
-    func openUrl(url:String) 
     var color: Color { get }
     var count: Int { get }
+    var isOn: Bool { get set }
+    var alert: AlertItem? { get set }
+    func navigateToHome()
+    func navigateWelcome()
+    func openUrl(url:String) 
     func increase()
     func decrease()
-    func isToggle() 
+    func isToggle()
+    func alert(for item: AlertItem) -> Alert
+    func showSimpleAlert()
 }
 
 

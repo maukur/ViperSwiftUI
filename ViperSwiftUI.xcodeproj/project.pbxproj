@@ -34,6 +34,7 @@
 		D0C5BA392A392A31005EA255 /* NavigationAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C5BA362A392A31005EA255 /* NavigationAssembly.swift */; };
 		D0C5BA3A2A392A31005EA255 /* NavigationServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C5BA372A392A31005EA255 /* NavigationServiceType.swift */; };
 		D0C5BA3B2A392A31005EA255 /* NavigationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C5BA382A392A31005EA255 /* NavigationService.swift */; };
+		D0DD1A782A3BC45100634711 /* AlertItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DD1A772A3BC45100634711 /* AlertItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,6 +66,7 @@
 		D0C5BA362A392A31005EA255 /* NavigationAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationAssembly.swift; sourceTree = "<group>"; };
 		D0C5BA372A392A31005EA255 /* NavigationServiceType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationServiceType.swift; sourceTree = "<group>"; };
 		D0C5BA382A392A31005EA255 /* NavigationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationService.swift; sourceTree = "<group>"; };
+		D0DD1A772A3BC45100634711 /* AlertItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +154,7 @@
 		D0C5BA152A391209005EA255 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				D0DD1A762A3BC44500634711 /* Alerts */,
 				D0C5BA352A392A31005EA255 /* NavigationService */,
 				D0C5BA2E2A3927BB005EA255 /* UrlService */,
 			);
@@ -190,6 +193,14 @@
 				D0C5BA382A392A31005EA255 /* NavigationService.swift */,
 			);
 			path = NavigationService;
+			sourceTree = "<group>";
+		};
+		D0DD1A762A3BC44500634711 /* Alerts */ = {
+			isa = PBXGroup;
+			children = (
+				D0DD1A772A3BC45100634711 /* AlertItem.swift */,
+			);
+			path = Alerts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,6 +284,7 @@
 				D08B795C2A34B8B3004DD224 /* WelcomeViewAssembly.swift in Sources */,
 				D0C5BA272A39272D005EA255 /* ObjectKey.swift in Sources */,
 				D0C5BA292A39272D005EA255 /* Assembly.swift in Sources */,
+				D0DD1A782A3BC45100634711 /* AlertItem.swift in Sources */,
 				D0C5BA392A392A31005EA255 /* NavigationAssembly.swift in Sources */,
 				D0C5BA2B2A39272D005EA255 /* WeakBox.swift in Sources */,
 				D0C5BA102A390E59005EA255 /* InteractorProtocol.swift in Sources */,

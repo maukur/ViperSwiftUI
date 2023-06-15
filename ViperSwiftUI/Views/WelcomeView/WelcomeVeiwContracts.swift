@@ -9,11 +9,13 @@ import SwiftUI
 
 
 protocol WelcomeViewRouterProtocol: RouterProtocol {
+    func navigateWelcome()
     func navigateToHome()
 }
 
 protocol WelcomePresenterProtocol: PresenterProtocol {
     func navigateToHome()
+    func navigateWelcome() 
     func openUrl(url:String) 
     var color: Color { get }
     var count: Int { get }

@@ -36,10 +36,13 @@ struct WelcomeView: View {
             }
             
             Button("Navigate To Next") {
-                presenter.navigateToHome()
+                presenter.navigateWelcome()
             }
             .buttonStyle(.plain)
             .background(presenter.color)
+            Button("Navigate To Home") {
+                presenter.navigateToHome()
+            }
             Button("Open URL") {
                 presenter.openUrl(url: "https://github.com/maukur")
             }

@@ -8,6 +8,10 @@
 import Foundation
 
 final class WelcomeRouter: WelcomeViewRouterProtocol {
+    func navigateWelcome() {
+        navigation.navigation.append(.welcome(.red))
+    }
+    
     
     var navigation: any NavigationServiceType
     
@@ -17,7 +21,7 @@ final class WelcomeRouter: WelcomeViewRouterProtocol {
     }
     
     func navigateToHome() {
-        navigation.navigation.append(.welcome(.red))
+        navigation.navigation.removeAll()
     }
     
     

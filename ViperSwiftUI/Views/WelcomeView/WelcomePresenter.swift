@@ -2,7 +2,7 @@ import SwiftUI
 import Combine
 
 
-public class WelcomePresenter: WelcomePresenterProtocol {
+final class WelcomePresenter: WelcomePresenterProtocol {
    
     var subscribers: Set<AnyCancellable> = []
     var router: WelcomeViewRouterProtocol
@@ -39,6 +39,10 @@ public class WelcomePresenter: WelcomePresenterProtocol {
     
     func navigateToHome() {
         router.navigateToHome()
+    }
+    
+    func navigateWelcome() {
+        router.navigateWelcome()
     }
     
     func openUrl(url:String) {
